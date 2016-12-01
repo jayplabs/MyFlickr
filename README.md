@@ -4,7 +4,7 @@
 The goal of this project is to display defaults photos from user account and search photos to display public photos from flickr.  Additionally this project supports search for photos using multiple tags as well as adding new comment to any photo.
 
 ## Prerequisites
-- Replace Client ID and Client Secret in FlickrManager.java with your own key and secret from [Flickr Services](https://www.flickr.com/services/)
+- Replace Client ID and Client Secret in [FlickrManager.java] (https://github.com/gcp1304/MyFlickr/blob/master/app/src/main/java/com/chandra/myflickr/flickr/FlickrManager.java) with your own key and secret from [Flickr Services](https://www.flickr.com/services/)
 
 ## Installation
 
