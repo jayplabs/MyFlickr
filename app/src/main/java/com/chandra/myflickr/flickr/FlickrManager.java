@@ -36,8 +36,8 @@ public class FlickrManager {
 
     private static final Logger logger = LoggerFactory.getLogger(FlickrManager.class.getSimpleName());
     private static FlickrManager instance = null;
-    private static final String CLIENT_ID="1b7a79d113e045a63dd900b8042c4a06"; //$NON-NLS-1$
-    private static final String CLIENT_SECRET ="759d629055103776"; //$NON-NLS-1$
+    private static final String CLIENT_ID=<KEY>; //$NON-NLS-1$
+    private static final String CLIENT_SECRET =<SECRET>; //$NON-NLS-1$
 
     private FlickrManager() {}
 
