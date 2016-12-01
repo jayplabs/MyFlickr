@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@android:color/background_dark">
+
+    <ImageView
+        android:id="@+id/image_default_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:src="@drawable/default_image_holder"
+        android:layout_gravity="center"/>
+
+    <ProgressBar
+        android:id="@+id/image_progress"
+        android:layout_width="@dimen/progress_loading_size"
+        android:layout_height="@dimen/progress_loading_size"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/medium_space">
+
+        <ImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="@dimen/item_icon_size"
+            android:layout_height="@dimen/item_icon_size"
+            android:scaleType="centerInside"
+            android:layout_marginLeft="@dimen/medium_space"
+            android:layout_marginStart="@dimen/medium_space"
+            android:src="@drawable/ic_comment_white_24dp"/>
+        <TextView
+            android:id="@+id/comment_counter"
+            android:textColor="@color/text_color_bright"
+            android:layout_toEndOf="@id/iv_comment"
+            style="@style/TextViewStylePrimaryMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="0 comments" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

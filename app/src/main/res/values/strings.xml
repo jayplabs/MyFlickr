@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MyFlickr</string>
+    <!-- default -->
+    <string name="empty_string"></string>
+
+    <!-- Login -->
+    <string name="flickr_login_string">Flickr Login</string>
+    <string name="login_string">Browse your photos from your Flickr account</string>
+
+    <!-- Home -->
+    <string name="menu_logout_string">Logout</string>
+    <string name="no_data_string">No photos found!</string>
+
+    <!-- Menu -->
+    <string name="search_hint">Search Flickr</string>
+    <string name="search">Search</string>
+    <string name="clear_search">Clear Search</string>
+
+    <!-- Dialogs -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Comments -->
+    <string name="no_comments_string">No comments found! \nBe the first to add comment!!!</string>
+</resources>

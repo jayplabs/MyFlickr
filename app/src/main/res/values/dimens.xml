@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- main screen -->
+    <dimen name="setting_icon_width">40dp</dimen>
+    <dimen name="item_icon_size">30dp</dimen>
+
+    <!-- no data view-->
+    <dimen name="font_no_data_view">16dp</dimen>
+    <dimen name="no_data_view_margin">60dp</dimen>
+
+    <!-- Image loading -->
+    <dimen name="progress_loading_size">45dp</dimen>
+
+
+    <!-- Default dimen -->
+    <dimen name="empty_space">0dp</dimen>
+    <dimen name="medium_space">10dp</dimen>
+    <dimen name="xxlarge_space">25dp</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Comment Card -->
+    <dimen name="card_space">4dp</dimen>
+
+</resources>

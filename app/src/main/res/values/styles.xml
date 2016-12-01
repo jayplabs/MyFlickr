@@ -1,0 +1,174 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
+    <style name="AppTheme.Fullscreen" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!-- Custom dialog -->
+    <style name="CustomDialogLoading" parent="android:Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- No data view style -->
+    <style name="app_no_data_view_style">
+        <item name="android:textColor">@color/text_color_light</item>
+        <item name="android:textSize">@dimen/font_no_data_view</item>
+        <item name="android:layout_marginTop">@dimen/no_data_view_margin</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <!-- App text view style -->
+    <style name="ParentTextViewStyle">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="ParentTextViewStyleLarge" parent="ParentTextViewStyle">
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <style name="ParentTextViewStyleMedium" parent="ParentTextViewStyle">
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="ParentTextViewStyleSmall" parent="ParentTextViewStyle">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="TextViewStylePrimaryLarge" parent="ParentTextViewStyleLarge">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextViewStylePrimaryMedium" parent="ParentTextViewStyleMedium">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="TextViewStylePrimarySmall" parent="ParentTextViewStyleSmall">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+
+    <style name="TextViewStyleBlackLarge" parent="ParentTextViewStyleLarge">
+        <item name="android:textColor">@color/text_color_black</item>
+    </style>
+
+    <style name="TextViewStyleBlackMedium" parent="ParentTextViewStyleMedium">
+        <item name="android:textColor">@color/text_color_black</item>
+    </style>
+
+    <style name="TextViewStyleBlackSmall" parent="ParentTextViewStyleSmall">
+        <item name="android:textColor">@color/text_color_black</item>
+    </style>
+
+    <!--<style name="app_text_view_gray_medium">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_gray</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="app_text_view_gray_large">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_gray</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <style name="app_text_view_dark_medium">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_dark</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="app_text_view_dark_medium_depressed">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_black</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="app_text_view_dark_small">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_dark</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="app_text_view_dark_large">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_dark</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <style name="app_text_view_light_medium">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_light</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="app_text_view_light_small">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_light</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>-->
+
+    <style name="TextViewStyleBrightLarge" parent="ParentTextViewStyleLarge">
+        <item name="android:textColor">@color/text_color_bright</item>
+    </style>
+
+    <style name="TextViewStyleBrightMedium" parent="ParentTextViewStyleMedium">
+        <item name="android:textColor">@color/text_color_bright</item>
+    </style>
+
+    <style name="TextViewStyleBrightSmall" parent="ParentTextViewStyleSmall">
+        <item name="android:textColor">@color/text_color_bright</item>
+    </style>
+
+    <!--<style name="app_text_view_bright_large">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_bright</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <style name="app_text_view_bright_medium">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_bright</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="app_text_view_bright_small">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_bright</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="app_text_view_light_large">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/text_color_light</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>-->
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+</resources>
