@@ -8,11 +8,16 @@ The goal of this project is to display defaults photos from user account and sea
 
 ## Installation
 
+# Option1
 - Ensure you have the latest version of Android Studio and the v25+ Android Build Tools.
 
 - Fork and clone the repo.
 
 - Open up the project with Android Studio. You can build the project using [Gradle][gradle].
+
+#Option2
+- Download [MyFlickr] (https://github.com/gcp1304/MyFlickr/blob/master/app-debug.apk) apk and install
+
 
 ## API Reference
 
