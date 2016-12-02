@@ -8,7 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="SplashTheme" parent="AppTheme.Fullscreen">
         <item name="android:windowBackground">@drawable/bg_splash</item>
     </style>
 
@@ -78,54 +87,6 @@
         <item name="android:textColor">@color/text_color_black</item>
     </style>
 
-    <!--<style name="app_text_view_gray_medium">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_gray</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
-    </style>
-
-    <style name="app_text_view_gray_large">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_gray</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
-    </style>
-
-    <style name="app_text_view_dark_medium">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_dark</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
-    </style>
-
-    <style name="app_text_view_dark_medium_depressed">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_black</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
-    </style>
-
-    <style name="app_text_view_dark_small">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_dark</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
-    </style>
-
-    <style name="app_text_view_dark_large">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_dark</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
-    </style>
-
-    <style name="app_text_view_light_medium">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_light</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
-    </style>
-
-    <style name="app_text_view_light_small">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_light</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
-    </style>-->
-
     <style name="TextViewStyleBrightLarge" parent="ParentTextViewStyleLarge">
         <item name="android:textColor">@color/text_color_bright</item>
     </style>
@@ -137,38 +98,5 @@
     <style name="TextViewStyleBrightSmall" parent="ParentTextViewStyleSmall">
         <item name="android:textColor">@color/text_color_bright</item>
     </style>
-
-    <!--<style name="app_text_view_bright_large">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_bright</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
-    </style>
-
-    <style name="app_text_view_bright_medium">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_bright</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
-    </style>
-
-    <style name="app_text_view_bright_small">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_bright</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
-    </style>
-
-    <style name="app_text_view_light_large">
-        <item name="android:fontFamily">sans-serif-light</item>
-        <item name="android:textColor">@color/text_color_light</item>
-        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
-    </style>-->
-
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 </resources>
