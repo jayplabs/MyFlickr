@@ -33,7 +33,7 @@ https://www.flickr.com/services/api/
 - ButterKnife - 8.4.0
 - Gson - 2.2.4
 - slf4j-android-1.6.1-RC1.jar
-- Picasso - 2.5.2
+- Fresco:0.14.1
 
 ## Contributors
 [Chandra Gopalaiah](https://github.com/gcp1304)
