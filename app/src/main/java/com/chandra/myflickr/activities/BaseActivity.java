@@ -27,7 +27,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        logger.debug("onCreate");
         mLoadingDialog = DialogUtils.createCustomDialogLoading(this);
 
         setLayoutResource();
@@ -48,7 +47,6 @@ public abstract class BaseActivity extends AppCompatActivity {
      * show dialog loading
      */
     public void showLoadingDialog() {
-        logger.debug("Showing loading dialog");
         if (mLoadingDialog != null && !mLoadingDialog.isShowing()) {
             mLoadingDialog.show();
 

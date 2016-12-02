@@ -10,10 +10,9 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.chandra.myflickr.Constants;
-import com.chandra.myflickr.activities.LoginActivity;
-import com.chandra.myflickr.flickr.FlickrLoginManager;
-import com.chandra.myflickr.flickr.FlickrManager;
+import com.chandra.myflickr.misc.Constants;
+import com.chandra.myflickr.managers.FlickrLoginManager;
+import com.chandra.myflickr.managers.FlickrManager;
 import com.googlecode.flickrjandroid.Flickr;
 import com.googlecode.flickrjandroid.auth.Permission;
 import com.googlecode.flickrjandroid.oauth.OAuthToken;
@@ -27,12 +26,10 @@ public class FlickrLoginTask extends AsyncTask<Void, Integer, String> {
     private ProgressDialog mProgressDialog;
     private Context mContext;
 
-    private LoginActivity mActivity;
 
     public FlickrLoginTask(Context context) {
         super();
         mContext = context;
-        mActivity = (LoginActivity) context;
     }
 
     @Override

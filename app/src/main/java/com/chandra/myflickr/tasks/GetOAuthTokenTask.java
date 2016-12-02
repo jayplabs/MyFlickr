@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.AsyncTask;
 
 import com.chandra.myflickr.activities.LoginActivity;
-import com.chandra.myflickr.flickr.FlickrManager;
+import com.chandra.myflickr.managers.FlickrManager;
 import com.googlecode.flickrjandroid.Flickr;
 import com.googlecode.flickrjandroid.oauth.OAuth;
 import com.googlecode.flickrjandroid.oauth.OAuthInterface;

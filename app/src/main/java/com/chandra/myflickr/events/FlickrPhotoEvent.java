@@ -1,4 +1,4 @@
-package com.chandra.myflickr.flickr.events;
+package com.chandra.myflickr.events;
 
 
 import com.chandra.myflickr.models.FlickrPhoto;

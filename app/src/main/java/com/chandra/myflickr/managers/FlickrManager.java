@@ -1,7 +1,6 @@
-package com.chandra.myflickr.flickr;
+package com.chandra.myflickr.managers;
 
-import com.chandra.myflickr.Constants;
-import com.chandra.myflickr.managers.CacheManager;
+import com.chandra.myflickr.misc.Constants;
 import com.chandra.myflickr.utils.StringUtils;
 import com.googlecode.flickrjandroid.Flickr;
 import com.googlecode.flickrjandroid.FlickrException;
@@ -11,7 +10,6 @@ import com.googlecode.flickrjandroid.oauth.OAuth;
 import com.googlecode.flickrjandroid.oauth.OAuthToken;
 import com.googlecode.flickrjandroid.people.PeopleInterface;
 import com.googlecode.flickrjandroid.photos.Extras;
-import com.googlecode.flickrjandroid.photos.Photo;
 import com.googlecode.flickrjandroid.photos.PhotoList;
 import com.googlecode.flickrjandroid.photos.PhotosInterface;
 import com.googlecode.flickrjandroid.photos.SearchParameters;
@@ -36,8 +34,8 @@ public class FlickrManager {
 
     private static final Logger logger = LoggerFactory.getLogger(FlickrManager.class.getSimpleName());
     private static FlickrManager instance = null;
-    private static final String CLIENT_ID=<KEY>; //$NON-NLS-1$
-    private static final String CLIENT_SECRET =<SECRET>; //$NON-NLS-1$
+    private static final String CLIENT_ID="1b7a79d113e045a63dd900b8042c4a06"; //$NON-NLS-1$
+    private static final String CLIENT_SECRET ="759d629055103776"; //$NON-NLS-1$
 
     private FlickrManager() {}
 
@@ -71,7 +69,26 @@ public class FlickrManager {
     // Private function
     //----------------------------------------------------------------------------------------------
 
-    private PhotoList getUserPhotos() {
+    public PhotoList getRecentPhotos() {
+        final PhotosInterface photosInterface = getPhotosInterface();
+        if (photosInterface == null)
+            return null;
+        PhotoList photoList = null;
+        try {
+            photoList = photosInterface.getRecent(null, Constants.NUM_OF_PHOTOS_PER_PAGE, Constants.NUM_OF_PAGES);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (FlickrException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return photoList;
+
+    }
+
+    public PhotoList getUserPhotos() {
         final PeopleInterface peopleInterface = getPeopleInterface();
         if (peopleInterface == null) {
             return null;
@@ -98,18 +115,10 @@ public class FlickrManager {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
         return photoList;
     }
 
-    public PhotoList getPhotos(String[] tags) {
-        if (tags == null || tags.length == 0)
-            return getUserPhotos();
-        else
-            return getPhotosByTag(tags);
-    }
-
-    private PhotoList getPhotosByTag(String[] tags) {
+    public PhotoList getPhotosByTag(String[] tags) {
 
         final PhotosInterface photosInterface = getPhotosInterface();
         if (photosInterface == null)

@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 
-import com.chandra.myflickr.MyApplication;
-import com.chandra.myflickr.flickr.FlickrLoginManager;
+import com.chandra.myflickr.utils.MyApplication;
+import com.chandra.myflickr.managers.FlickrLoginManager;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,6 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         if (!FlickrLoginManager.hasLogin()) {
-            logger.debug("User not logged in");
             showLoginActivity(true);
         } else {
             Intent intent = PhotoGalleryActivity.newInstance(MyApplication.getAppContext());
@@ -32,7 +31,6 @@ public class SplashActivity extends AppCompatActivity {
     // Event
     //----------------------------------------------------------------------------------------------
     protected void showLoginActivity(boolean doLogout) {
-        logger.debug("Display Login Activity");
         Intent intent = LoginActivity.newInstance(MyApplication.getAppContext(), !doLogout);
         startActivity(intent);
 

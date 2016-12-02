@@ -1,4 +1,4 @@
-package com.chandra.myflickr;
+package com.chandra.myflickr.utils;
 
 import android.app.Application;
 import android.content.Context;
@@ -6,10 +6,7 @@ import android.content.Context;
 
 public class MyApplication extends Application {
 
-    private static final String TAG = "PhotoManager_Chandra";
-
     private static Context mContext;
-
 
     @Override
     public void onCreate() {

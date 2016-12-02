@@ -1,15 +1,14 @@
-package com.chandra.myflickr.flickr;
+package com.chandra.myflickr.managers;
 
-import com.chandra.myflickr.managers.CacheManager;
 import com.chandra.myflickr.utils.StringUtils;
 import com.googlecode.flickrjandroid.oauth.OAuth;
 import com.googlecode.flickrjandroid.oauth.OAuthToken;
 import com.googlecode.flickrjandroid.people.User;
 
-import static com.chandra.myflickr.Constants.KEY_OAUTH_TOKEN;
-import static com.chandra.myflickr.Constants.KEY_TOKEN_SECRET;
-import static com.chandra.myflickr.Constants.KEY_USER_ID;
-import static com.chandra.myflickr.Constants.KEY_USER_NAME;
+import static com.chandra.myflickr.misc.Constants.KEY_OAUTH_TOKEN;
+import static com.chandra.myflickr.misc.Constants.KEY_TOKEN_SECRET;
+import static com.chandra.myflickr.misc.Constants.KEY_USER_ID;
+import static com.chandra.myflickr.misc.Constants.KEY_USER_NAME;
 
 public class FlickrLoginManager {
 

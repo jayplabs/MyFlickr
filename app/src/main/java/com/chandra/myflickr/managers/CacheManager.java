@@ -3,14 +3,14 @@ package com.chandra.myflickr.managers;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.chandra.myflickr.MyApplication;
+import com.chandra.myflickr.utils.MyApplication;
 import com.chandra.myflickr.utils.StringUtils;
 import com.google.gson.Gson;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
-import static com.chandra.myflickr.Constants.PREFS_NAME;
+import static com.chandra.myflickr.misc.Constants.PREFS_NAME;
 
 
 public class CacheManager {

@@ -20,12 +20,12 @@ import android.widget.TextView;
 
 import com.chandra.myflickr.R;
 import com.chandra.myflickr.adapters.PhotosAdapter;
-import com.chandra.myflickr.flickr.FlickrLoginManager;
-import com.chandra.myflickr.models.FlickrPhoto;
-import com.chandra.myflickr.flickr.events.FlickrPhotoCommentEvent;
-import com.chandra.myflickr.flickr.events.FlickrPhotoEvent;
+import com.chandra.myflickr.managers.FlickrLoginManager;
+import com.chandra.myflickr.events.FlickrPhotoCommentEvent;
+import com.chandra.myflickr.events.FlickrPhotoEvent;
 import com.chandra.myflickr.managers.CacheManager;
 import com.chandra.myflickr.misc.QueryPreferences;
+import com.chandra.myflickr.models.FlickrPhoto;
 import com.chandra.myflickr.services.UserPhotoService;
 import com.google.gson.reflect.TypeToken;
 
@@ -81,10 +81,10 @@ public class PhotoGalleryActivity extends BaseActivity implements
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (!FlickrLoginManager.hasLogin()) {
-            goToLoginActivity(true);
-            return;
-        }
+            if (!FlickrLoginManager.hasLogin()) {
+                goToLoginActivity(true);
+                return;
+            }
 
         initialiseData();
         initialiseUI();

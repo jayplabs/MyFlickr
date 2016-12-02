@@ -23,13 +23,27 @@
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <ImageView
-                android:id="@+id/toolbarImage"
+            <ViewAnimator
+                android:id="@+id/animator"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:fitsSystemWindows="true"
-                app:layout_collapseMode="parallax"/>
+                android:layout_height="match_parent"
+                android:background="@android:color/background_dark"
+                android:animateFirstView="false"
+                >
+                <ImageView
+                    android:id="@+id/toolbarImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:fitsSystemWindows="true"
+                    app:layout_collapseMode="parallax"
+                    />
+                <ProgressBar
+                    android:id="@+id/image_progress"
+                    android:layout_width="@dimen/progress_loading_size"
+                    android:layout_height="@dimen/progress_loading_size"
+                    android:layout_gravity="center"/>
+            </ViewAnimator>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"

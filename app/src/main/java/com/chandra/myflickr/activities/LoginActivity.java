@@ -1,16 +1,14 @@
 package com.chandra.myflickr.activities;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.webkit.WebView;
 import android.widget.Toast;
 
-import com.chandra.myflickr.Constants;
+import com.chandra.myflickr.misc.Constants;
 import com.chandra.myflickr.R;
-import com.chandra.myflickr.flickr.FlickrLoginManager;
+import com.chandra.myflickr.managers.FlickrLoginManager;
 import com.chandra.myflickr.tasks.FlickrLoginTask;
 import com.chandra.myflickr.tasks.GetOAuthTokenTask;
 import com.googlecode.flickrjandroid.oauth.OAuth;
@@ -41,7 +39,6 @@ public class LoginActivity extends BaseActivity {
         super.onNewIntent(intent);
         // this is very important, otherwise you would get a null Scheme in the onResume later on.
         // you have to set intent before it's being used in onResume
-        logger.debug("On new intent : " + intent.getScheme());
         setIntent(intent);
     }
 
@@ -68,10 +65,8 @@ public class LoginActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        logger.debug("onResume");
         Intent intent = getIntent();
         String scheme = intent.getScheme();
-        logger.debug("Scheme :" + scheme);
         if (!Constants.CALLBACK_SCHEME.equals(scheme)) {
             return;
         }
@@ -85,7 +80,6 @@ public class LoginActivity extends BaseActivity {
 
     @OnClick(R.id.btn_flick_login)
     protected void onFlickrLoginClicked() {
-        logger.debug("Login Clicked");
         if (FlickrLoginManager.hasLogin()) {
             performAfterLogin();
             return;
@@ -94,13 +88,11 @@ public class LoginActivity extends BaseActivity {
     }
 
     protected void getAuthorization() {
-        logger.debug("Getting User Authorization");
         FlickrLoginTask flickrLoginTask = new FlickrLoginTask(this);
         flickrLoginTask.execute();
     }
 
     protected void performAfterLogin() {
-        logger.debug("Show screen after login");
         Intent intent = PhotoGalleryActivity.newInstance(this);
         startActivity(intent);
         finish();
@@ -112,7 +104,6 @@ public class LoginActivity extends BaseActivity {
     }
 
     protected void onGetOAuthToken(Intent intent) {
-        logger.debug("getting oauth token");
         Uri uri = intent.getData();
         String query = uri.getQuery();
         String[] data = query.split("&");

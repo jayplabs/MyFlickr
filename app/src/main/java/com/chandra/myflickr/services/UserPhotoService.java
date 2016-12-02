@@ -3,11 +3,11 @@ package com.chandra.myflickr.services;
 import android.app.IntentService;
 import android.content.Intent;
 
-import com.chandra.myflickr.flickr.FlickrManager;
+import com.chandra.myflickr.managers.FlickrManager;
 import com.chandra.myflickr.models.FlickrPhoto;
-import com.chandra.myflickr.flickr.events.CommentsDownloadedEvent;
-import com.chandra.myflickr.flickr.events.FlickrPhotoCommentEvent;
-import com.chandra.myflickr.flickr.events.FlickrPhotoEvent;
+import com.chandra.myflickr.events.CommentsDownloadedEvent;
+import com.chandra.myflickr.events.FlickrPhotoCommentEvent;
+import com.chandra.myflickr.events.FlickrPhotoEvent;
 import com.chandra.myflickr.models.PhotoComment;
 import com.googlecode.flickrjandroid.photos.Photo;
 import com.googlecode.flickrjandroid.photos.PhotoList;
@@ -56,9 +56,9 @@ public class UserPhotoService extends IntentService {
                 }
 
                 if (tags == null || tags.length == 0) {
-                    photoList = mFlickrManager.getPhotos(null);
+                    photoList = mFlickrManager.getRecentPhotos();
                 } else {
-                    photoList = mFlickrManager.getPhotos(tags);
+                    photoList = mFlickrManager.getPhotosByTag(tags);
                 }
                 if (photoList == null) {
                     EventBus.getDefault().post(new FlickrPhotoEvent(null));

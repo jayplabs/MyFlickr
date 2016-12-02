@@ -3,24 +3,27 @@
              android:layout_height="match_parent"
              android:background="@android:color/background_dark">
 
-    <ImageView
-        android:id="@+id/image_default_holder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scaleType="centerInside"
-        android:src="@drawable/default_image_holder"
-        android:layout_gravity="center"/>
 
-    <ProgressBar
-        android:id="@+id/image_progress"
-        android:layout_width="@dimen/progress_loading_size"
-        android:layout_height="@dimen/progress_loading_size"
-        android:layout_gravity="center"/>
-
-    <ImageView
-        android:id="@+id/image_view"
+    <ViewAnimator
+        android:id="@+id/animator"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="@android:color/background_dark"
+        android:animateFirstView="false"
+        >
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        <ProgressBar
+            android:id="@+id/image_progress"
+            android:layout_width="@dimen/progress_loading_size"
+            android:layout_height="@dimen/progress_loading_size"
+            android:layout_gravity="center"/>
+    </ViewAnimator>
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
