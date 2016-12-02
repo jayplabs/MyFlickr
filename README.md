@@ -16,7 +16,7 @@ The goal of this project is to display defaults photos from user account and sea
 - Open up the project with Android Studio. You can build the project using [Gradle][gradle].
 
 #Option2
-- Download [MyFlickr] (https://github.com/gcp1304/MyFlickr/blob/master/app-debug.apk) apk and install
+- Download [MyFlickr] (https://github.com/gcp1304/MyFlickr/blob/master/MyFlickr.apk) apk and install
 
 
 ## API Reference
@@ -33,6 +33,7 @@ https://www.flickr.com/services/api/
 - ButterKnife - 8.4.0
 - Gson - 2.2.4
 - slf4j-android-1.6.1-RC1.jar
+- Picasso - 2.5.2
 
 ## Contributors
 [Chandra Gopalaiah](https://github.com/gcp1304)
