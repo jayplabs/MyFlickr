@@ -8,14 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.ViewAnimator;
 
 import com.chandra.myflickr.R;
 import com.chandra.myflickr.activities.CommentsActivity;
 import com.chandra.myflickr.models.FlickrPhoto;
 import com.chandra.myflickr.utils.DeviceUtils;
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -95,15 +93,8 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
     }
 
     private void loadImage(final ViewHolder holder, String imageUrl) {
-        // Index 1 is the progress bar. Show it while we're loading the image.
-        holder.animator.setDisplayedChild(1);
 
-        Picasso.with(mContext).load(imageUrl).into(holder.ivPhoto, new Callback.EmptyCallback() {
-            @Override public void onSuccess() {
-                // Index 0 is the image view.
-                holder.animator.setDisplayedChild(0);
-            }
-        });
+        holder.ivPhoto.setImageURI(imageUrl);
     }
 
     protected void onCommentClicked(final ViewHolder holder, final FlickrPhoto photo, final int position) {
@@ -126,7 +117,7 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
     protected static class ViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.image_view)
-        ImageView ivPhoto;
+        SimpleDraweeView ivPhoto;
 
         @BindView(R.id.iv_comment)
         ImageView btnComment;
@@ -134,8 +125,6 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
         @BindView(R.id.comment_counter)
         TextView commentCounter;
 
-        @BindView(R.id.animator)
-        ViewAnimator animator;
 
         public ViewHolder(View itemView) {
             super(itemView);

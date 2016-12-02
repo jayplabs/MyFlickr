@@ -6,9 +6,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.chandra.myflickr.misc.Constants;
 import com.chandra.myflickr.R;
 import com.chandra.myflickr.managers.FlickrLoginManager;
+import com.chandra.myflickr.misc.Constants;
 import com.chandra.myflickr.tasks.FlickrLoginTask;
 import com.chandra.myflickr.tasks.GetOAuthTokenTask;
 import com.googlecode.flickrjandroid.oauth.OAuth;

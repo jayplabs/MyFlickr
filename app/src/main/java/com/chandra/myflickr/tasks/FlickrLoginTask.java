@@ -10,9 +10,9 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.chandra.myflickr.misc.Constants;
 import com.chandra.myflickr.managers.FlickrLoginManager;
 import com.chandra.myflickr.managers.FlickrManager;
+import com.chandra.myflickr.misc.Constants;
 import com.googlecode.flickrjandroid.Flickr;
 import com.googlecode.flickrjandroid.auth.Permission;
 import com.googlecode.flickrjandroid.oauth.OAuthToken;

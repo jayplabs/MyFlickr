@@ -13,21 +13,18 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.ViewAnimator;
 
 import com.chandra.myflickr.R;
 import com.chandra.myflickr.adapters.CommentsRecyclerAdapter;
-import com.chandra.myflickr.managers.FlickrLoginManager;
 import com.chandra.myflickr.events.CommentsDownloadedEvent;
 import com.chandra.myflickr.events.FlickrPhotoCommentEvent;
+import com.chandra.myflickr.managers.FlickrLoginManager;
 import com.chandra.myflickr.models.FlickrPhoto;
 import com.chandra.myflickr.models.PhotoComment;
 import com.chandra.myflickr.services.UserPhotoService;
 import com.chandra.myflickr.utils.StringUtils;
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -53,16 +50,13 @@ public class CommentsActivity extends BaseActivity {
     FloatingActionButton mFloatingActionButton;
 
     @BindView(R.id.toolbarImage)
-    ImageView mToolbarImage;
+    SimpleDraweeView mToolbarImage;
 
     @BindView(R.id.commentsRecyclerView)
     RecyclerView mCommentsRecyclerView;
 
     @BindView(R.id.noCommentsTextView)
     TextView mNoCommentsTextView;
-
-    @BindView(R.id.animator)
-    ViewAnimator mAnimator;
 
     private int mPosition;
     private FlickrPhoto mPhoto;
@@ -161,15 +155,7 @@ public class CommentsActivity extends BaseActivity {
     }
 
     private void loadImage(String imageUrl) {
-        // Index 1 is the progress bar. Show it while we're loading the image.
-        mAnimator.setDisplayedChild(1);
-
-        Picasso.with(this).load(imageUrl).into(mToolbarImage, new Callback.EmptyCallback() {
-            @Override public void onSuccess() {
-                // Index 0 is the image view.
-                mAnimator.setDisplayedChild(0);
-            }
-        });
+        mToolbarImage.setImageURI(imageUrl);
     }
 
     View.OnClickListener listener = new View.OnClickListener() {

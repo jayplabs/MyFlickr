@@ -4,9 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-
-import com.chandra.myflickr.utils.MyApplication;
 import com.chandra.myflickr.managers.FlickrLoginManager;
+import com.chandra.myflickr.utils.MyApplication;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

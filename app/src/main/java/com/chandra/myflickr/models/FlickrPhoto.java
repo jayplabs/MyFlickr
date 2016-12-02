@@ -3,7 +3,6 @@ package com.chandra.myflickr.models;
 import com.googlecode.flickrjandroid.photos.Photo;
 
 import java.io.Serializable;
-import java.util.Random;
 
 public class FlickrPhoto implements Serializable {
     //https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg

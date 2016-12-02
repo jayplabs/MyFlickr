@@ -3,11 +3,11 @@ package com.chandra.myflickr.services;
 import android.app.IntentService;
 import android.content.Intent;
 
-import com.chandra.myflickr.managers.FlickrManager;
-import com.chandra.myflickr.models.FlickrPhoto;
 import com.chandra.myflickr.events.CommentsDownloadedEvent;
 import com.chandra.myflickr.events.FlickrPhotoCommentEvent;
 import com.chandra.myflickr.events.FlickrPhotoEvent;
+import com.chandra.myflickr.managers.FlickrManager;
+import com.chandra.myflickr.models.FlickrPhoto;
 import com.chandra.myflickr.models.PhotoComment;
 import com.googlecode.flickrjandroid.photos.Photo;
 import com.googlecode.flickrjandroid.photos.PhotoList;

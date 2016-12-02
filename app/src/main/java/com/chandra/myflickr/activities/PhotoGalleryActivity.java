@@ -20,10 +20,10 @@ import android.widget.TextView;
 
 import com.chandra.myflickr.R;
 import com.chandra.myflickr.adapters.PhotosAdapter;
-import com.chandra.myflickr.managers.FlickrLoginManager;
 import com.chandra.myflickr.events.FlickrPhotoCommentEvent;
 import com.chandra.myflickr.events.FlickrPhotoEvent;
 import com.chandra.myflickr.managers.CacheManager;
+import com.chandra.myflickr.managers.FlickrLoginManager;
 import com.chandra.myflickr.misc.QueryPreferences;
 import com.chandra.myflickr.models.FlickrPhoto;
 import com.chandra.myflickr.services.UserPhotoService;
